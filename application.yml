@@ -1,0 +1,15 @@
+#该文件被ApplicatoinContext的父容器加载，早于application.yml,而且内容不会被替换
+spring:
+  profiles:
+    active:
+      - dev
+---
+spring:
+  profiles: dev 
+  application:
+    name: micoroservice-config-dev
+---
+spring:
+  profiles: test
+  application:
+    name: micoroservice-config-test
